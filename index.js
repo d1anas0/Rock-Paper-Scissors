@@ -19,6 +19,9 @@
 
 // Function 1: playSingleRound(); which includes a series of operations triggered initially by user's input.
 
+const enterPlayerSelection = document.getElementById("enterPlayerSelection");
+enterPlayerSelection.addEventListener("click", playSingleRound);
+
 // Business Logic: function 1 will be called a total of 5 times; during which the number of times the user wins is tallied up.
 
 // When roundsPlayed = 5, declareChampion() and end (restart) the game.
