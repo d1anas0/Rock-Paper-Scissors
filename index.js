@@ -12,3 +12,13 @@
 
 // Other tips:
 // - use prompt() to get input from the user.
+
+// _________________________________________________________________
+// Re-interpreting the instructions based on the flow chart I have designed
+// _________________________________________________________________
+
+// Function 1: playSingleRound(); which includes a series of operations triggered initially by user's input.
+
+// Business Logic: function 1 will be called a total of 5 times; during which the number of times the user wins is tallied up.
+
+// When roundsPlayed = 5, declareChampion() and end (restart) the game.
