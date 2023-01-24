@@ -19,8 +19,15 @@
 
 // Function 1: playSingleRound(); which includes a series of operations triggered initially by user's input.
 
-const enterPlayerSelection = document.getElementById("enterPlayerSelection");
-enterPlayerSelection.addEventListener("click", playSingleRound);
+let userInput = document.getElementById("playerSelection").value;
+console.log("userInput value", userInput);
+
+const playSingleRound = () => {
+  //   let playerSelection = userInput.toLowerCase();
+};
+
+// const enterPlayerSelection = document.getElementById("enterPlayerSelection");
+// enterPlayerSelection.addEventListener("click", playSingleRound);
 
 // Business Logic: function 1 will be called a total of 5 times; during which the number of times the user wins is tallied up.
 
