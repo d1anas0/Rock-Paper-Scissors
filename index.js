@@ -13,21 +13,34 @@
 // Other tips:
 // - use prompt() to get input from the user.
 
-// _________________________________________________________________
+// ----------------------------------------------------------------------------
 // Re-interpreting the instructions based on the flow chart I have designed
-// _________________________________________________________________
+// ----------------------------------------------------------------------------
 
 // Function 1: playSingleRound(); which includes a series of operations triggered initially by user's input.
 
-let userInput = document.getElementById("playerSelection").value;
-console.log("userInput value", userInput);
+let playerInput = document.getElementById("playerSelection");
 
 const playSingleRound = () => {
-  //   let playerSelection = userInput.toLowerCase();
+  const playerSelection = () => {
+    const resetInput = () => {
+      playerInput.value = "";
+    };
+    console.log("playerInput Value = ", playerInput.value);
+
+    // notes to self
+    // now our player is able to enter their play, and we've made sure that anything they enter will be lower case.
+    // and then the user input field should clear, once the user has clicked on the 'play' button.
+
+    // *** HERE *** my flow chart indicates that there will be a playerSelection() to encapsulate the playerSelection. Which is essentially just userInput.value... wrapping this into a playerSelection() anyway, still need to do the .lowerCase() on userInput.value
+    resetInput();
+  };
+
+  playerSelection();
 };
 
-// const enterPlayerSelection = document.getElementById("enterPlayerSelection");
-// enterPlayerSelection.addEventListener("click", playSingleRound);
+const enterPlayerSelection = document.getElementById("enterPlayerSelection");
+enterPlayerSelection.addEventListener("click", playSingleRound);
 
 // Business Logic: function 1 will be called a total of 5 times; during which the number of times the user wins is tallied up.
 
