@@ -27,6 +27,10 @@ const playSingleRound = () => {
       playerInput.value = "";
     };
     console.log("playerInput Value = ", playerInput.value);
+    const playerInputValue = playerInput.value;
+    const lowerCasePlayerInput = playerInputValue.toLowerCase();
+    console.log("playerInput Value1 = ", playerInputValue);
+    console.log("lowerCaseInput", lowerCasePlayerInput);
 
     // notes to self
     // now our player is able to enter their play, and we've made sure that anything they enter will be lower case.
