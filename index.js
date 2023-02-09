@@ -32,16 +32,24 @@ const playSingleRound = () => {
     // and then the user input field will clear.
     resetInput();
 
-    // so user has now clicked on the 'play' button, which should also trigger getComputerChoice()
+    // so user has now clicked on the 'play' button, which should also trigger getComputerChoice(), to generate the computers play
   };
   const getComputerChoice = () => {
     const availableChoices = ["rock", "paper", "scissors"];
-    const computerChoice = availableChoices;
-    // *** HERE ***
-    // currently trying to work out: how to use Math.random to randomly select an item from an array
+    const generateRandomPlay = (array) => {
+      const randomIndex = Math.floor(Math.random() * (array.length + 1));
+      const play = array[randomIndex];
+      return play;
+    };
+
+    const result = generateRandomPlay(availableChoices);
+    console.log(result);
   };
 
+  // *** HERE *** now that we have player AND computer's input, we can determineWinner()!
+
   playerSelection();
+  getComputerChoice();
 };
 
 const enterPlayerSelection = document.getElementById("enterPlayerSelection");
